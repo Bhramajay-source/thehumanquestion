@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b35"><meta name="description" content="A human-centred space for hard questions about AI.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Human Question — AI needs humility. Humanity needs a voice.">
+<meta property="og:description" content="An independent space for hard questions, philosophy, research and open debate about artificial intelligence.">
+<meta property="og:image" content="the_human_question_thumbnail.jpg">
+<meta property="og:image:width" content="1728">
+<meta property="og:image:height" content="1024">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Human Question">
+<meta name="twitter:description" content="AI needs humility. Humanity needs a voice.">
+<meta name="twitter:image" content="the_human_question_thumbnail.jpg"><title>The Human Question — A space to challenge AI</title>
+<style>
+:root{--ink:#102b35;--deep:#102b35;--paper:#f5f1e8;--cream:#fffdf7;--muted:#617078;--teal:#69c6b4;--mint:#d9eee5;--coral:#ef9278;--gold:#e8bd68;--line:#102b3522;--serif:Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}button,input,textarea,select{font:inherit}a{color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:#102b35f5;color:white}.nav{max-width:1160px;margin:auto;padding:12px 22px;display:flex;justify-content:space-between;align-items:center}.brand{text-decoration:none;font-size:.8rem;font-weight:900;letter-spacing:.14em}.brand i{font:24px Georgia;background:var(--teal);color:var(--ink);border-radius:50%;padding:4px 11px;margin-right:8px}.links{display:flex;gap:20px}.links a{text-decoration:none;font-size:.83rem;color:#e4efeb}.menu{display:none;background:none;color:white;border:1px solid #ffffff66;border-radius:30px;padding:8px 12px}
+.hero{background:radial-gradient(circle at 80% 20%,#285b60,#183d46 35%,#102b35 75%);color:white;padding:72px 0;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.kicker,.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:850;color:#55b8a5}.hero h1{font:500 clamp(3rem,7vw,6.4rem)/.98 var(--serif);letter-spacing:-.045em;margin:18px 0}.hero h1 em{color:var(--gold)}.lead{font-size:1.15rem;color:#dce9e5;max-width:650px}.actions,.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:99px;padding:13px 19px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.primary{background:var(--gold);color:var(--ink)}.secondary{background:#ffffff0c;border:1px solid #ffffff66;color:white}.btn:hover,button:hover{filter:brightness(.96);transform:translateY(-1px)}.orbit{width:min(350px,80vw);aspect-ratio:1;border:1px solid #9bded577;border-radius:50%;margin:auto;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#9bded522 0 34%,transparent 35%)}.planet{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font-size:65px;background:radial-gradient(circle at 35% 30%,#a4e2cf,#4f9e91 40%,#245d67 75%);box-shadow:0 0 60px #75d7c755}.orbit span{position:absolute;background:#173f49;border:1px solid #ffffff55;border-radius:30px;padding:8px 12px;font-size:.72rem}.orbit span:nth-child(2){top:10%;left:-4%}.orbit span:nth-child(3){right:-7%;top:48%}.orbit span:nth-child(4){bottom:8%;left:12%}
+.manifesto{background:var(--mint);padding:25px 0}.manifesto strong{font:500 clamp(1.3rem,3vw,2rem)/1.2 var(--serif)}.manifesto small{display:block;color:#397a70;letter-spacing:.15em;text-transform:uppercase;font-weight:850;margin-bottom:7px}
+section{padding:72px 0}.head{max-width:760px;margin-bottom:32px}.head h2{font:500 clamp(2.3rem,5vw,4rem)/1.05 var(--serif);letter-spacing:-.035em;margin:10px 0}.head p,.muted{color:var(--muted)}.tests{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.test,.panel{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 30px #102b3509}.test{min-height:270px;display:flex;flex-direction:column}.num{font:2.6rem var(--serif);color:#8db9ad}.test h3,.panel h3{font:1.5rem/1.1 var(--serif);margin:12px 0}.test p{color:var(--muted)}.test b{margin-top:auto;color:#277568;font-size:.8rem}
+.quoteBand{background:#e8dfce;padding:55px 0}.quote{font:clamp(1.9rem,4vw,3.5rem)/1.13 var(--serif);text-align:center;max-width:950px;margin:auto}.quote em{color:#b65f49}.by{text-align:center;margin-top:15px;color:var(--muted);font-size:.75rem;letter-spacing:.13em;text-transform:uppercase}
+.split,.labGrid,.joinGrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.question{background:var(--deep);color:white;border-radius:23px;padding:26px}.pill{display:inline-block;border:1px solid #ffffff55;border-radius:30px;padding:6px 10px;color:var(--teal);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em}.questionText{font:clamp(1.55rem,3vw,2.2rem)/1.2 var(--serif);margin:18px 0 25px}.small{border:1px solid var(--line);background:white;border-radius:30px;padding:10px 14px;font-weight:750;cursor:pointer}.small.dark{background:#ffffff0c;color:white;border-color:#ffffff55}
+.field{width:100%;border:1px solid var(--line);background:#fffdf8;border-radius:13px;padding:13px;color:var(--ink);outline:none}.field:focus{border-color:#4b9d8f;box-shadow:0 0 0 3px #69c6b433}textarea.field{min-height:125px;resize:vertical}label{display:block;font-weight:800;font-size:.82rem;margin:13px 0 7px}.formrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.note{font-size:.75rem;color:var(--muted)}.posts{display:grid;gap:10px;margin-top:17px}.post{background:white;border:1px solid var(--line);border-radius:15px;padding:15px}.post p{margin:5px 0 0;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}
+.lab{background:#dcece5}.math{font:clamp(1.5rem,3vw,2.4rem) var(--serif);text-align:center;background:white;border-radius:14px;padding:22px;margin:16px 0}.range{width:100%;accent-color:#327f72}.metric{display:flex;justify-content:space-between;gap:10px;font-size:.85rem;margin-top:14px}.result{background:#173d46;color:white;padding:20px;border-radius:17px;margin-top:18px}.result strong{font:2rem var(--serif);color:var(--gold)}.result p{color:#d9e8e2;margin-bottom:0}.methodGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.method{background:#e2eee8;border:1px solid #c9ded4;border-radius:17px;padding:18px}.method b{font:1.15rem var(--serif)}.method p{font-size:.85rem;color:#526a64;margin-bottom:0}
+.join{background:var(--deep);color:white}.join .head p{color:#c8d9d4}.joinCard{border:1px solid #ffffff33;background:#ffffff09;border-radius:21px;padding:23px}.joinCard p{color:#cadbd6}
+footer{background:#0b2028;color:#b9ccc6;padding:28px 0;font-size:.8rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;z-index:30;background:#06171dcc;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modalbox{background:var(--cream);border-radius:20px;padding:25px;max-width:550px;width:100%}.modalhead{display:flex;justify-content:space-between;align-items:center}.close{border:0;border-radius:50%;width:38px;height:38px;font-size:1.2rem;cursor:pointer}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--deep);color:white;padding:11px 17px;border-radius:30px;z-index:50;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.heroGrid,.split,.labGrid,.joinGrid{grid-template-columns:1fr}.tests{grid-template-columns:1fr}.test{min-height:0}.methodGrid{grid-template-columns:1fr 1fr}.hero{padding:50px 0}.heroArt{padding:15px}.links{display:none;position:absolute;top:58px;left:0;right:0;background:var(--deep);padding:20px;flex-direction:column}.links.open{display:flex}.menu{display:block}}
+@media(max-width:520px){.wrap{padding:0 16px}section{padding:55px 0}.manifesto{padding:22px 0}.methodGrid{grid-template-columns:1fr}.hero h1{font-size:3.2rem}.planet{width:125px;height:125px}.orbit{width:280px}}
+
+:root{--serif:"Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,serif;--sans:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{letter-spacing:-.008em}
+.brand{font-size:.76rem;letter-spacing:.16em}
+.hero{position:relative}
+.hero:after{content:"";position:absolute;inset:auto -10% -38% 45%;height:420px;border:1px solid #9bded522;border-radius:50%;pointer-events:none}
+.hero h1{font-weight:500}
+.test,.panel,.joinCard{box-shadow:0 12px 34px #102b350a;transition:transform .22s ease,box-shadow .22s ease}
+.test:hover,.panel:hover{transform:translateY(-2px);box-shadow:0 18px 40px #102b3512}
+button,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e8bd68;outline-offset:3px}
+button:disabled{opacity:.42;cursor:not-allowed;transform:none!important}
+.shareLab{background:#eee8dc}
+.shareGrid,.dataGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dailyDate{font:italic 1rem var(--serif);color:#327f72;margin:8px 0 15px}
+.socialDraft{min-height:145px}
+.shareFooter{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:18px;padding:22px 24px;border-radius:20px;background:#173d46;color:white}
+.shareFooter p{color:#cbdcd6;max-width:760px;margin-bottom:0}
+.cleanList{padding-left:20px;color:var(--muted)}
+.cleanList li{margin:9px 0}
+#your-data{background:#f8f5ee}
+#your-data .panel{height:100%}
+#posterCanvas{box-shadow:0 14px 38px #102b3520}
+@media(max-width:800px){.shareGrid,.dataGrid{grid-template-columns:1fr}.shareFooter{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.shareFooter{padding:19px}.hero h1{letter-spacing:-.055em}.btn,.small{min-height:44px}}
+
+
+/* Tactile motion layer: subtle, reader-led, and respectful of reduced-motion settings. */
+:root{--ease-flow:cubic-bezier(.22,.72,.22,1);--motion-fast:180ms;--motion-flow:520ms}
+html{scroll-behavior:smooth;scroll-padding-top:82px;overscroll-behavior-y:contain}
+body{-webkit-tap-highlight-color:transparent;touch-action:pan-y;scrollbar-gutter:stable}
+main{overflow:clip}
+section{scroll-margin-top:78px}
+button,.btn,.small,.test,.method,.joinCard,.panel{transform:translateZ(0);will-change:transform}
+button,.btn,.small{transition:transform 240ms var(--ease-flow),box-shadow 240ms var(--ease-flow),filter 180ms ease,background-color 180ms ease}
+button:not(:disabled):hover,.btn:hover,.small:hover{transform:translateY(-2px) scale(1.025);box-shadow:0 9px 22px #102b3520}
+button:not(:disabled):active,.btn:active,.small:active{transform:translateY(1px) scale(.975);box-shadow:0 2px 8px #102b3518}
+button.tap-wiggle,.btn.tap-wiggle,.small.tap-wiggle{animation:softNudge 360ms var(--ease-flow)}
+@keyframes softNudge{0%{transform:translateX(0) scale(1)}22%{transform:translateX(-1.5px) rotate(-.35deg) scale(1.015)}48%{transform:translateX(1.2px) rotate(.25deg)}72%{transform:translateX(-.6px)}100%{transform:translateX(0) scale(1)}}
+.test,.method,.panel,.joinCard{transition:transform 420ms var(--ease-flow),box-shadow 420ms var(--ease-flow),border-color 420ms ease}
+.test:active,.panel:active,.joinCard:active{transform:scale(.992)}
+a:not(.btn){text-decoration-thickness:1px;text-underline-offset:3px;transition:color 180ms ease,opacity 180ms ease}
+a:not(.btn):active{opacity:.68}
+.field{transition:border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
+.field:focus{transform:translateY(-1px)}
+section .wrap>.head,section .wrap>.split,section .wrap>.tests,section .wrap>.labGrid,section .wrap>.methodGrid,section .wrap>.joinGrid,section .wrap>.shareGrid,section .wrap>.dataGrid{transition:opacity 650ms var(--ease-flow),transform 650ms var(--ease-flow)}
+.motion-ready .reveal{opacity:0;transform:translateY(17px) scale(.995)}
+.motion-ready .reveal.in-view{opacity:1;transform:translateY(0) scale(1)}
+.motion-ready .reveal.in-view>*{animation:softArrive 520ms var(--ease-flow) both}
+@keyframes softArrive{from{opacity:.72;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.progress-rail{position:fixed;z-index:60;top:0;left:0;width:100%;height:3px;background:transparent;pointer-events:none}
+.progress-rail span{display:block;height:100%;width:0;background:linear-gradient(90deg,#69c6b4,#e8bd68);transform-origin:left center}
+.nav .links a[aria-current="location"]{color:var(--gold);position:relative}
+.nav .links a[aria-current="location"]:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:2px;background:var(--gold)}
+.touch-hint{position:fixed;z-index:25;bottom:14px;left:50%;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:#102b35eF;color:#fffdf7;border:1px solid #ffffff25;border-radius:30px;padding:8px 13px;font-size:.72rem;transition:opacity 260ms ease,transform 260ms var(--ease-flow)}
+.touch-hint.show{opacity:1;transform:translate(-50%,0)}
+@media(hover:none){button:not(:disabled):hover,.btn:hover,.small:hover{transform:none;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .motion-ready .reveal{opacity:1;transform:none}
+}
+
+</style></head><body>
+<div class="progress-rail" aria-hidden="true"><span id="readingProgress"></span></div><div class="touch-hint" id="touchHint" aria-live="polite">Take your time · scroll at your own pace</div>
+<header><nav class="nav"><a class="brand" href="#home"><i>?</i>THE HUMAN QUESTION</a><button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button><div class="links" id="links"><a href="#tests">Three tests</a><a href="#debate">Open debate</a><a href="#room">Host a room</a><a href="#research">Research</a><a href="#studio">Creative studio</a><a href="#share-lab">Share & publish</a><a href="#your-data">Your data</a><a href="#method">Method</a><a href="#author">Author</a><a href="#architecture">Architecture</a><a href="#join">Take part</a></div></nav></header>
+<main>
+<section class="hero" id="home"><div class="wrap heroGrid"><div><div class="kicker">An independent space for hard questions</div><h1>AI needs<br><em>humility.</em><br>Humanity needs a voice.</h1><p class="lead">A living space for philosophy, research, criticism and host-led debate about artificial intelligence — grounded in human understanding, collective knowledge and the future we share.</p><div class="actions"><a class="btn primary" href="#debate">Bring a hard question ↗</a><a class="btn secondary" href="#tests">Explore the three tests</a></div></div><div class="heroArt"><div class="orbit"><div class="planet">◉</div><span>PEOPLE & VOICES</span><span>KNOWLEDGE</span><span>OUR SHARED FUTURE</span></div></div></div></section>
+<div class="manifesto"><div class="wrap"><small>A starting belief</small><strong>Capability is not the same as understanding. And capability is not a licence for authority.</strong></div></div>
+<section id="tests"><div class="wrap"><div class="head"><div class="eyebrow">The research at the centre</div><h2>Three tests. One difficult question.</h2><p>What should count as responsible artificial understanding in a human conversation? These tests turn that question into something we can examine, challenge and improve.</p></div><div class="tests">
+<article class="test"><div class="num">01</div><h3>Risk-sensitive pragmatic restraint</h3><p>Can AI distinguish what a person literally says from what they may intend — while responding proportionately when safety may be at stake?</p><b>INTENT · CONTEXT · UNCERTAINTY</b></article>
+<article class="test"><div class="num">02</div><h3>Need-sensitive affective responsiveness</h3><p>Can AI recognise whether someone needs information, practical help, emotional presence or simply space to speak?</p><b>EMOTION · ATTENTION · CARE</b></article>
+<article class="test"><div class="num">03</div><h3>Provenance-bounded epistemic authority</h3><p>Can AI distinguish what it knows, what it infers and what it cannot legitimately claim about a person?</p><b>EVIDENCE · HUMILITY · CORRECTION</b></article></div></div></section>
+<div class="quoteBand"><div class="wrap"><div class="quote">“The legitimacy of artificial intelligence should begin not with how much it can do, but with how responsibly it knows <em>when not to decide.</em>”</div><div class="by">A principle for public discussion · The Human Question</div></div></div>
+<section id="debate"><div class="wrap"><div class="head"><div class="eyebrow">Not a stage. A space for exchange.</div><h2>Bring your hardest question.</h2><p>Challenge an assumption. Offer a counterexample. Share a philosophical argument, lived experience or research question. Strong disagreement is welcome; dehumanisation is not.</p></div>
+<div class="split"><div class="question"><span class="pill">Question to open the room</span><div class="questionText" id="qtext">If an AI system cannot explain the limits of what it knows about you, why should it be allowed to make decisions that affect you?</div><div class="row"><button class="small dark" id="next">Another hard question ↻</button><button class="small dark" id="shareQ">Share this question ↗</button></div></div>
+<div class="panel"><h3>Put an idea into the commons</h3><p class="muted">Start with a question, a claim or a criticism. Be specific. Make room for others to disagree.</p><form id="debateForm"><label for="topic">Conversation thread</label><select class="field" id="topic"><option>Intent and interpretation</option><option>Emotion and human needs</option><option>Knowledge and authority</option><option>Democracy and power</option><option>Culture, language and plural knowledge</option><option>Planetary and future responsibility</option><option>Other hard questions</option></select><label for="contribution">Your question or contribution</label><textarea class="field" id="contribution" maxlength="1200" required placeholder="What do you think AI should never decide alone? What evidence or experience makes you ask?"></textarea><div class="row"><button type="button" class="small" id="voiceBtn">🎙 Speak your contribution</button><span class="note" id="voiceStatus">Voice input depends on browser support and permission; browser speech services may process audio externally.</span></div><div class="formrow"><span class="note">Temporary session only · nothing is published automatically.</span><button class="btn primary">Add to this session</button></div></form></div></div><div class="posts" id="posts" aria-live="polite"></div></div></section>
+<section class="lab" id="research"><div class="wrap"><div class="head"><div class="eyebrow">Research, not rhetoric</div><h2>Make the understanding gap visible.</h2><p>A possible mathematical model can connect observed failures with limits on delegated authority. It is a research hypothesis to test — not a machine for calculating moral truth.</p></div><div class="labGrid"><div class="panel"><h3>A conceptual authority barrier</h3><div class="math">A<sub>max</sub> = A<sub>0</sub> / (1 + λG + μU + νR)</div><p class="muted">As the understanding gap, uncertainty or potential harm rises, the maximum authority delegated to an AI system should fall.</p><p class="note">Illustrative model only. Measures and coefficients require empirical validation. Some decisions should never be delegated regardless of score.</p></div><div class="panel"><h3>Explore the relationship</h3><p class="muted">Move the controls to see how a hypothetical authority ceiling changes. This is not a validated assessment of any AI system.</p>
+<div class="metric"><label for="gap">Understanding gap (G)</label><b id="gv">0.30</b></div><input class="range" id="gap" type="range" min="0" max="1" step=".05" value=".30">
+<div class="metric"><label for="unc">Uncertainty (U)</label><b id="uv">0.30</b></div><input class="range" id="unc" type="range" min="0" max="1" step=".05" value=".30">
+<div class="metric"><label for="risk">Potential harm (R)</label><b id="rv">0.30</b></div><input class="range" id="risk" type="range" min="0" max="1" step=".05" value=".30">
+<div class="result"><span class="pill">Illustrative authority ceiling</span><br><strong id="av">0.53</strong><p id="at">Higher uncertainty and risk call for stronger human review and tighter limits.</p></div></div></div></div></section>
+<section id="studio"><div class="wrap"><div class="head"><div class="eyebrow">Ideas that travel</div><h2>Make a question visible.</h2><p>Create a simple shareable quote poster from the project's central ideas. Choose a message, preview it and export an image for your social networks.</p></div><div class="split"><div class="panel"><h3>Poster studio</h3><label for="posterTitle">Your headline or question</label><textarea class="field" id="posterTitle" maxlength="180">Does the ability to calculate give AI the right to decide?</textarea><label for="posterSub">Supporting thought</label><input class="field" id="posterSub" maxlength="120" value="Capability is not the same as understanding."><label for="posterFormat">Platform format · resolution adjusts automatically</label><select class="field" id="posterFormat"><option value="instagram">Instagram portrait · 1080 × 1350</option><option value="square">Square post · 1080 × 1080</option><option value="story">Story / Reel cover · 1080 × 1920</option><option value="x">X landscape · 1600 × 900</option></select><label for="posterTheme">Colour atmosphere</label><select class="field" id="posterTheme"><option value="deep">Deep ocean · gold</option><option value="light">Warm paper · forest</option><option value="sunset">Sunrise · coral</option></select><div class="row"><button class="btn primary" id="makePoster">Update poster</button><button class="small" id="downloadPoster">Download PNG</button><button class="small" id="sharePoster">Share poster ↗</button></div><p class="note" id="posterResolution">Export: 1080 × 1350 px · generated on this device. No text is uploaded.</p></div><div class="panel"><canvas id="posterCanvas" width="1080" height="1350" style="width:100%;height:auto;border-radius:14px;display:block"></canvas></div></div></div></section>
+
+<section id="share-lab" class="shareLab">
+ <div class="wrap">
+  <div class="head"><div class="eyebrow">Public conversation · your editorial choice</div>
+   <h2>Turn an idea into a public question.</h2>
+   <p>Create a daily X draft, an Instagram caption or a shareable quote. Review every word yourself. Nothing is posted automatically.</p>
+  </div>
+  <div class="shareGrid">
+   <article class="panel">
+    <div class="eyebrow">Daily X prompt</div>
+    <div class="dailyDate" id="dailyDate"></div>
+    <label for="xDraft">Your post</label>
+    <textarea class="field socialDraft" id="xDraft" maxlength="280"></textarea>
+    <label for="xTags">Hashtags and optional institutional tags</label>
+    <input class="field" id="xTags" value="#TheHumanQuestion #AI #HumanDignity #ResponsibleAI #DigitalRights">
+    <p class="note">Suggested tags are prompts, not endorsements. Check institutional account handles before mentioning them.</p>
+    <div class="row">
+     <button class="btn primary" id="newDaily">New daily idea ↻</button>
+     <button class="small" id="copyX">Copy X draft</button>
+    </div>
+    <div class="row">
+     <button class="small" id="shareX">Open X composer ↗</button>
+     <button class="small" id="downloadX">Download .txt</button>
+    </div>
+   </article>
+   <article class="panel">
+    <div class="eyebrow">Instagram & shareable highlights</div>
+    <label for="instaCaption">Instagram caption</label>
+    <textarea class="field" id="instaCaption">AI needs humility. Humanity needs a voice.
+
+Capability is not the same as understanding. And capability is not a licence for authority.
+
+What should AI never decide alone?
+
+Join the conversation at The Human Question.
+
+#TheHumanQuestion #HumanDignity #ResponsibleAI #DigitalRights #AIethics</textarea>
+    <div class="row">
+     <button class="small" id="copyInsta">Copy Instagram caption</button>
+     <button class="small" id="shareInsta">Share caption ↗</button>
+    </div>
+    <label for="quoteText">A quote or question to turn into a share card</label>
+    <textarea class="field" id="quoteText">The greater the power, the greater the burden of humility, transparency and human accountability.</textarea>
+    <div class="row">
+     <button class="small" id="useQuote">Use in poster studio ↓</button>
+     <button class="small" id="downloadQuote">Download quote card</button>
+    </div>
+   </article>
+  </div>
+  <div class="shareFooter">
+   <div><b>Share with institutions and public voices</b><p>Invite universities, research centres, civil-society groups, public institutions, journalists and technology companies into an open exchange. Address them respectfully; ask questions, offer evidence and leave room for disagreement.</p></div>
+   <button class="btn secondary" id="copyInvite">Copy open invitation</button>
+  </div>
+ </div>
+</section>
+<section id="your-data">
+ <div class="wrap">
+  <div class="head"><div class="eyebrow">Your data · your choice</div><h2>Nothing leaves without your action.</h2>
+   <p>No account is required in this prototype. Drafts and notes remain in page memory. You can export a copy when you choose, import it for a later session, or clear the workspace.</p>
+  </div>
+  <div class="dataGrid">
+   <article class="panel">
+    <h3>Your session data</h3>
+    <p class="muted">This includes your current session contributions, moderator note, X draft and Instagram caption. It is not automatically saved.</p>
+    <div class="row"><button class="btn primary" id="exportData">Export my data (.json)</button><button class="small" id="importData">Import my data</button><input type="file" id="importFile" accept="application/json,.json" hidden></div>
+    <div class="row"><button class="small" id="clearAllData">Clear this session</button><span class="note" id="dataStatus">No automatic storage or tracking by this page.</span></div>
+   </article>
+   <article class="panel">
+    <h3>Freedom and responsibility</h3>
+    <ul class="cleanList">
+     <li>Read, question, disagree and leave without creating an account.</li>
+     <li>Choose what to share and where to share it.</li>
+     <li>Export your own working material in a portable format.</li>
+     <li>No automated profiling, advertising trackers or hidden publication in this prototype.</li>
+     <li>Respect other people's privacy and obtain consent before sharing their words, image or voice.</li>
+    </ul>
+    <p class="note">This static prototype is not connected to ChatGPT and does not train an AI model. A future live conversation service must disclose its model/API provider, data flow, retention and consent before anyone uses it. A live hosted service may process technical connection data; hosting, security and privacy terms must be reviewed before launch.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="method"><div class="wrap"><div class="head"><div class="eyebrow">How we examine claims</div><h2>Open methods. Visible limits.</h2><p>Truth is not a slogan or a property any single platform can claim. It is a disciplined practice: evidence, provenance, criticism, correction and intellectual honesty.</p></div><div class="methodGrid"><div class="method"><b>Evidence & provenance</b><p>Show where a claim comes from, what supports it and what remains unknown.</p></div><div class="method"><b>Plural knowledge</b><p>Make room for science, philosophy, cultural knowledge and lived experience, with methods and limits visible.</p></div><div class="method"><b>Criticism & correction</b><p>Invite counterarguments, publish corrections and preserve unresolved disagreement.</p></div><div class="method"><b>Human accountability</b><p>Keep consequential decisions answerable to people and legitimate institutions.</p></div></div></div></section>
+<section class="join" id="join"><div class="wrap"><div class="head"><div class="eyebrow">A collective inquiry</div><h2>This question belongs to all of us.</h2><p>We need volunteers across languages, disciplines, cultures and generations to help test the three propositions, question the methods and make the research more rigorous.</p></div><div class="joinGrid"><div class="joinCard"><h3>Take part in the experiment</h3><p>Help review AI responses to carefully designed scenarios about intent, emotional needs and epistemic limits. Compare responses fairly across languages and contexts.</p><button class="btn primary" id="volunteer">I’m interested ↗</button></div><div class="joinCard"><h3>Share the question</h3><p>Start a conversation in your network. Invite disagreement, not applause. Present proposals as proposals, not proven results.</p><div class="row"><button class="small dark" id="shareSite">Share this project ↗</button><button class="small dark" id="copy">Copy the central principle</button></div></div></div></div></section>
+
+<section id="author"><div class="wrap"><div class="head"><div class="eyebrow">Authorship, purpose & contact</div><h2>A voice, not a brand.</h2><p>This is an independent research and public-discourse initiative. Its purpose is to ask difficult questions about AI, examine the evidence, invite serious criticism and keep consequential judgement accountable to people.</p></div>
+<div class="split"><article class="panel"><h3>Author’s note</h3><p>My work brings together biophysics, structural biology, education and philosophical inquiry. I hold a PhD in Biophysical Chemistry from Hannover Medical School and approach this project as an independent researcher interested in how scientific knowledge, human experience and public reasoning can inform one another. I began this inquiry with three simple but difficult questions: Can an AI system recognise human intention? Can it respond appropriately to emotional need? Can it know the limits of what it claims about a person?</p><p>The Three Tests of Artificial Understanding are the starting point of this work. I want to examine them critically, test them across languages and cultural contexts, and develop mathematical and methodological tools that help limit unjustified AI authority.</p><p>This is not a campaign against technology, nor an invitation to accept AI answers uncritically. It is an invitation to investigate what responsible artificial intelligence should mean for people, societies, nature and future generations.</p><p>Knowledge belongs to no single company, culture or institution. I welcome rigorous disagreement, evidence, correction and collaboration. The editorial responsibility for this project remains human.</p><p><strong>Dr. Jayashankar Selvadurai</strong><br>Independent Researcher, Author & Educator<br>Hannover, Germany</p></article>
+<article class="panel"><h3>Contact & collaboration</h3><p class="muted">For research exchange, independent and freelance critical analysis, philosophical discussion, writing, speaking, educational collaboration and volunteer contributions:</p><p><strong>Email</strong><br><a href="mailto:s.jayashankar@gmail.com">s.jayashankar@gmail.com</a></p><div class="methodGrid" style="grid-template-columns:1fr 1fr;margin:16px 0">
+<div class="method"><b>Instagram</b><p><a href="https://www.instagram.com/jay_selvadurai?psln=MXY3Z3diMmN4MnpuNQ==" target="_blank" rel="noopener noreferrer">@jay_selvadurai ↗</a></p></div>
+<div class="method"><b>Facebook</b><p><a href="https://www.facebook.com/share/1GSM46dcf1/" target="_blank" rel="noopener noreferrer">Jayashankar Selvadurai · Facebook ↗</a></p></div>
+<div class="method"><b>WhatsApp</b><p>Public contact link to be added when you provide the number or click-to-chat URL.</p></div>
+<div class="method"><b>Other networks</b><p>LinkedIn / research profiles can be added when confirmed.</p></div></div><p class="note">Only contact channels deliberately supplied for public use will be published. No personal phone number is displayed in this version.</p></article></div>
+</div></section>
+
+<section id="room" class="join">
+ <div class="wrap">
+  <div class="head"><div class="eyebrow">Host-led discussion · prototype</div><h2>Your room. Your pace. Your decision.</h2>
+   <p>This is a local demonstration of the moderator workflow. It does not connect visitors to one another, embed ChatGPT, or transmit audio, video or messages. A real conversation service is a separate, consent-led development stage.</p></div>
+  <div class="joinGrid">
+   <div class="joinCard">
+    <span class="pill">Moderator controls</span>
+    <h3 style="font:1.8rem Georgia;margin:16px 0 8px">Open a discussion room</h3>
+    <label for="roomTitle">Room topic</label><input class="field" id="roomTitle" value="The limits of AI understanding">
+    <label for="roomPrompt">Opening question</label><textarea class="field" id="roomPrompt">What should an AI system never decide alone?</textarea>
+    <div class="formrow"><button class="btn primary" id="openRoom">Open room</button><button class="small dark" id="closeRoom" disabled>Close room</button></div>
+    <p class="note" id="roomStatus" style="color:#cadbd6">Room closed. Nothing is running in the background.</p>
+    <div class="formrow">
+     <button class="small dark" id="pauseRoom" disabled>Pause discussion</button>
+     <button class="small dark" id="endRoom" disabled>End session</button>
+    </div>
+   </div>
+   <div class="joinCard">
+    <span class="pill">Live session controls</span>
+    <h3 style="font:1.8rem Georgia;margin:16px 0 8px">Floor & moderation</h3>
+    <p>Use these controls to practise the host flow. In this prototype, participant names and messages are sample entries only.</p>
+    <div class="panel" style="background:#fffdf7;color:#102b35">
+     <b id="activeRoomTitle">No active room</b><p id="activeRoomPrompt" class="muted">Open a room to begin.</p>
+     <div class="formrow"><button class="small" id="giveFloor" disabled>Give floor</button><button class="small" id="takeFloor" disabled>Take floor</button></div>
+     <p class="note" id="floorStatus">The floor is not assigned.</p>
+    </div>
+    <div class="formrow"><button class="small dark" id="inviteCopy" disabled>Copy invitation</button><button class="small dark" id="clearSession" disabled>Clear session</button></div>
+    <p class="note" style="color:#cadbd6">No participant accounts, public chat feed, automatic publication or stored transcript.</p>
+   </div>
+  </div>
+  <div class="joinCard" style="margin-top:16px">
+   <div class="eyebrow">Session notes · temporary</div><p id="sessionNotice" style="color:#cadbd6">No session notes. Any text entered here exists only until this page is closed or refreshed.</p>
+   <label for="hostNote">Private note for the host</label><textarea id="hostNote" class="field" placeholder="A point to return to, a question, or a participant to invite to speak…"></textarea>
+   <div class="formrow"><button class="small dark" id="clearNote">Clear note</button><span class="note" style="color:#cadbd6">Not sent or saved.</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="architecture" class="lab"><div class="wrap"><div class="head"><div class="eyebrow">How the inquiry should run</div><h2>Human direction. Computational support.</h2><p>The website is the public interface; the research process behind it needs transparent stages, safeguards and version control.</p></div><div class="methodGrid"><div class="method"><b>01 · Questions</b><p>People submit questions, critiques and counterexamples. This prototype keeps draft contributions in page memory only; public submissions require a separately approved publishing workflow.</p></div><div class="method"><b>02 · Research</b><p>Claims are checked against primary sources, peer-reviewed work and clearly labelled evidence. Uncertainty and disagreement remain visible.</p></div><div class="method"><b>03 · Testing</b><p>Scenario sets test intent, affective responsiveness and epistemic limits across languages and contexts, with human evaluation.</p></div><div class="method"><b>04 · Review & release</b><p>AI may assist analysis and drafting; a human editor approves every public change. Changes are versioned with dates and a correction log.</p></div></div><div class="panel" style="margin-top:16px"><h3>Proposed production architecture</h3><p><strong>Mobile-first web app</strong> → accessible frontend and content system → optional secure real-time relay (session memory only) → source/provenance register → AI-assisted analysis sandbox → human editorial approval → public release and change log.</p><p class="muted">The AI analysis environment should be separated from public publishing. No model should silently rewrite research, decide moderation appeals, publish claims or change the authority framework. A production room needs secure host authentication, invitation controls, rate limits and a clear retention policy. Session-only chat still requires a live relay; hosting providers may process technical connection data.</p></div><div class="panel" style="margin-top:16px"><h3>What this prototype does — and does not do</h3>
+<p><strong>It does:</strong> demonstrate a mobile-friendly host workflow, temporary page-session notes, pause/resume, floor control, invitation text and a clear end-session action.</p>
+<p><strong>It does not:</strong> provide real multi-person live chat, audio/video calls, participant authentication, podcast hosting or public media storage. Those require a production server or peer-to-peer media setup.</p>
+<p class="muted">No interaction is written to browser storage by this page. Closing or refreshing the page clears temporary notes and contributions. This does not by itself guarantee zero technical logs at the hosting, network or internet-provider level. Free Wi-Fi does not mean server hosting or media bandwidth is free.</p></div></div></section>
+</main><footer><div class="wrap foot"><div><b>THE HUMAN QUESTION</b><br>A space for philosophy, research and open debate about AI.</div><div>Dr. Jayashankar Selvadurai · Hannover, Germany<br><a href="mailto:s.jayashankar@gmail.com">s.jayashankar@gmail.com</a><br>Designed for inquiry, not certainty.</div><a href="#home">Back to the beginning ↑</a></div></footer>
+<div class="modal" id="modal"><div class="modalbox"><div class="modalhead"><h3>Join the research conversation</h3><button class="close" id="close">×</button></div><p class="muted">This prototype does not transmit or permanently store your details. Prepare a message to the project organiser.</p><label for="volnote">What would you like to contribute?</label><textarea class="field" id="volnote" placeholder="Language, research, scenario design, critical review, accessibility, moderation..."></textarea><div class="formrow"><button class="small" id="copyvol">Copy invitation message</button><button class="btn primary" id="close2">Close</button></div></div></div><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id),qs=[
+"If an AI system cannot explain the limits of what it knows about you, why should it be allowed to make decisions that affect you?",
+"Can a system understand a human need if it only optimises for the most likely next answer?",
+"When a person speaks ambiguously, who should carry the burden of uncertainty: the person or the machine?",
+"Can a system be fair if its performance is strong in one language and unreliable in another?",
+"What if an AI recommendation is efficient and evidence-based, yet unacceptable to the people affected?",
+"Who has the authority to define the knowledge an AI system treats as important?",
+"Can AI help humanity think more freely without narrowing what counts as reasonable thought?",
+"What decisions should remain human even if AI becomes better at predicting outcomes?"
+];
+function toast(s){let t=$('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+$('menu').onclick=()=>{$('links').classList.toggle('open');$('menu').setAttribute('aria-expanded',$('links').classList.contains('open')?'true':'false')};document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('links').classList.remove('open'));
+$('next').onclick=()=>{let q=$('qtext').textContent,n;do{n=qs[Math.floor(Math.random()*qs.length)]}while(n===q);$('qtext').textContent=n};
+async function share(text){try{if(navigator.share)await navigator.share({title:'The Human Question',text,url:location.href});else{await navigator.clipboard.writeText(text+' '+location.href);toast('Copied — ready to share')}}catch(e){}}
+$('shareQ').onclick=()=>share($('qtext').textContent);$('shareSite').onclick=()=>share('A space for hard questions about AI, human understanding and shared responsibility.');
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText('Capability is not the same as understanding. And capability is not a licence for authority.');toast('Principle copied')}catch(e){toast('Copy is not available in this browser')}};
+// Session-only demonstration: no localStorage, cookies, IndexedDB or sessionStorage.
+let sessionContributions=[];
+function render(){let box=$('posts');box.innerHTML='';sessionContributions.slice().reverse().forEach(x=>{let a=document.createElement('article');a.className='post';let b=document.createElement('b');b.textContent=x.topic;let p=document.createElement('p');p.textContent=x.text;a.append(b,p);box.append(a)})}
+$('debateForm').onsubmit=e=>{e.preventDefault();let t=$('contribution').value.trim();if(!t)return;sessionContributions.push({topic:$('topic').value,text:t});$('contribution').value='';render();toast('Added to this temporary page session only')};
+
+// Moderator workflow demo only; all state remains in page memory.
+let roomOpen=false, roomPaused=false, floorGiven=false;
+function setRoomUI(){
+ $('roomStatus').textContent=!roomOpen?'Room closed. Nothing is running in the background.':(roomPaused?'Room open · discussion paused.':'Room open · ready for invited participants.');
+ $('openRoom').disabled=roomOpen;$('closeRoom').disabled=!roomOpen;
+ $('pauseRoom').disabled=!roomOpen;$('endRoom').disabled=!roomOpen;
+ $('giveFloor').disabled=!roomOpen||roomPaused;$('takeFloor').disabled=!roomOpen||roomPaused;
+ $('inviteCopy').disabled=!roomOpen;$('clearSession').disabled=!roomOpen;
+ $('activeRoomTitle').textContent=roomOpen?$('roomTitle').value:'No active room';
+ $('activeRoomPrompt').textContent=roomOpen?$('roomPrompt').value:'Open a room to begin.';
+ $('pauseRoom').textContent=roomPaused?'Resume discussion':'Pause discussion';
+ $('floorStatus').textContent=floorGiven?'A participant has the floor (demo state).':'The floor is held by the host.';
+}
+$('openRoom').onclick=()=>{roomOpen=true;roomPaused=false;floorGiven=false;setRoomUI();toast('Demo room opened on this device')};
+$('closeRoom').onclick=()=>{roomOpen=false;roomPaused=false;floorGiven=false;setRoomUI();toast('Room closed')};
+$('pauseRoom').onclick=()=>{roomPaused=!roomPaused;setRoomUI()};
+$('endRoom').onclick=()=>{roomOpen=false;roomPaused=false;floorGiven=false;$('hostNote').value='';setRoomUI();toast('Session ended; temporary notes cleared')};
+$('giveFloor').onclick=()=>{floorGiven=true;setRoomUI()};
+$('takeFloor').onclick=()=>{floorGiven=false;setRoomUI()};
+$('inviteCopy').onclick=async()=>{let msg='You are invited to a hosted discussion on The Human Question. Topic: '+$('roomTitle').value+'. Opening question: '+$('roomPrompt').value+'. The host will moderate the session.';try{await navigator.clipboard.writeText(msg);toast('Invitation copied')}catch(e){toast('Copy is not available in this browser')}};
+$('clearSession').onclick=()=>{$('hostNote').value='';floorGiven=false;setRoomUI();toast('Temporary session note cleared')};
+$('clearNote').onclick=()=>{$('hostNote').value='';toast('Note cleared')};
+$('roomTitle').oninput=()=>{if(roomOpen)setRoomUI()};
+$('roomPrompt').oninput=()=>{if(roomOpen)setRoomUI()};
+setRoomUI();
+
+function calc(){let g=+$('gap').value,u=+$('unc').value,r=+$('risk').value,a=1/(1+1.4*g+1.2*u+1.8*r);$('gv').textContent=g.toFixed(2);$('uv').textContent=u.toFixed(2);$('rv').textContent=r.toFixed(2);$('av').textContent=a.toFixed(2);$('at').textContent=a>.7?'Relatively high illustrative ceiling; accountability and non-delegable decisions still apply.':a>.4?'Moderate ceiling: require meaningful human review, traceability and a route to challenge.':'Low ceiling: prioritise human decision-making, escalation and safeguards.'}
+['gap','unc','risk'].forEach(id=>$(id).oninput=calc);calc();render();
+const SpeechAPI=window.SpeechRecognition||window.webkitSpeechRecognition;
+$('voiceBtn').onclick=()=>{if(!SpeechAPI){$('voiceStatus').textContent='Voice recognition is not supported in this browser. You can type instead.';return}let rec=new SpeechAPI();rec.lang=navigator.language||'en-US';rec.interimResults=false;rec.onstart=()=>$('voiceStatus').textContent='Listening… speak now.';rec.onresult=e=>{$('contribution').value+=($('contribution').value?' ':'')+e.results[0][0].transcript;$('voiceStatus').textContent='Voice added. Please review before posting.'};rec.onerror=()=>$('voiceStatus').textContent='Microphone unavailable or permission denied.';rec.onend=()=>{if($('voiceStatus').textContent==='Listening… speak now.')$('voiceStatus').textContent='Listening ended.'};rec.start()};
+
+function posterDimensions(){
+ const v=$('posterFormat').value;
+ return v==='square'?[1080,1080]:v==='story'?[1080,1920]:v==='x'?[1600,900]:[1080,1350];
+}
+function drawPosterOn(c){
+ const [W,H]=[c.width,c.height],ctx=c.getContext('2d'),theme=$('posterTheme').value;
+ let bg1='#102b35',bg2='#183d46',accent='#e8bd68',fg='#fffdf7';
+ if(theme==='light'){bg1='#f5f1e8';bg2='#d9eee5';accent='#28786c';fg='#102b35'}
+ if(theme==='sunset'){bg1='#5d3440';bg2='#e68d73';accent='#ffe0a1';fg='#fffaf1'}
+ let g=ctx.createLinearGradient(0,0,W,H);g.addColorStop(0,bg1);g.addColorStop(1,bg2);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ const m=W*.078,land=H*.065,wide=W-m*2;
+ ctx.save();ctx.globalAlpha=.18;ctx.strokeStyle=fg;ctx.lineWidth=Math.max(1,W/800);
+ const cx=W*.82,cy=H*.22;
+ for(let r=W*.12;r<W*.52;r+=W*.075){ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke()}
+ ctx.restore();
+ ctx.fillStyle=accent;ctx.font=`800 ${Math.max(18,W*.026)}px system-ui`;ctx.letterSpacing='0.18em';ctx.fillText('THE HUMAN QUESTION',m,land);
+ const title=$('posterTitle').value.trim()||'A question worth asking';
+ let size=Math.min(W*.075,H*.09),min=Math.max(34,W*.045),lines=[];
+ function wrap(text,font){ctx.font=font;let out=[],line='';for(const word of text.split(/\s+/)){const t=line?line+' '+word:word;if(ctx.measureText(t).width>wide&&line){out.push(line);line=word}else line=t}if(line)out.push(line);return out}
+ while(size>min){lines=wrap(title,`600 ${size}px Georgia`);if(lines.length*size*1.12<H*.38)break;size-=3}
+ ctx.fillStyle=fg;ctx.font=`600 ${size}px Georgia`;ctx.textBaseline='top';
+ let y=H*.34-(lines.length*size*1.12)/2;
+ lines.forEach(line=>{ctx.fillText(line,m,y,wide);y+=size*1.12});
+ ctx.fillStyle=accent;ctx.fillRect(m,y+size*.55,Math.min(W*.17,180),Math.max(5,W*.007));
+ const sub=$('posterSub').value.trim(),subSize=Math.max(20,W*.031),subLines=wrap(sub,`${subSize}px system-ui`);
+ ctx.fillStyle=fg;ctx.font=`${subSize}px system-ui`;y+=size*1.3;
+ subLines.slice(0,4).forEach(line=>{ctx.fillText(line,m,y,wide);y+=subSize*1.45});
+ ctx.fillStyle=accent;ctx.font=`800 ${Math.max(17,W*.022)}px system-ui`;ctx.letterSpacing='.1em';
+ ctx.fillText('INTENT  ·  EMOTION  ·  KNOWLEDGE',m,H*.87);
+ ctx.fillStyle=fg;ctx.globalAlpha=.76;ctx.font=`${Math.max(16,W*.019)}px system-ui`;
+ ctx.fillText('A space for philosophy, research and open debate',m,H*.925);ctx.globalAlpha=1;ctx.textBaseline='alphabetic';
+}
+function drawPoster(){const [w,h]=posterDimensions(),c=$('posterCanvas');c.width=w;c.height=h;drawPosterOn(c);$('posterResolution').textContent=`Export: ${w} × ${h} px · generated on this device. No text is uploaded.`}
+function makePosterBlob(){const [w,h]=posterDimensions(),c=document.createElement('canvas');c.width=w;c.height=h;drawPosterOn(c);return new Promise(resolve=>c.toBlob(resolve,'image/png'))}
+$('makePoster').onclick=drawPoster;$('posterTheme').onchange=drawPoster;$('posterFormat').onchange=drawPoster;
+$('downloadPoster').onclick=async()=>{const b=await makePosterBlob();if(!b){toast('Could not create image');return}const [w,h]=posterDimensions(),a=document.createElement('a');a.download=`human-question-${w}x${h}.png`;a.href=URL.createObjectURL(b);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500);toast(`Downloaded ${w} × ${h} poster`)};
+$('sharePoster').onclick=async()=>{const b=await makePosterBlob();if(!b)return;const f=new File([b],'the-human-question.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'The Human Question',text:$('posterTitle').value})}catch(e){}}else{$('downloadPoster').click();toast('Image downloaded; attach it to your post') }};
+drawPoster();
+
+$('volunteer').onclick=()=>$('modal').classList.add('open');function close(){ $('modal').classList.remove('open') }$('close').onclick=close;$('close2').onclick=close;$('modal').onclick=e=>{if(e.target===$('modal'))close()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+$('copyvol').onclick=async()=>{let s='I am interested in contributing to The Human Question research initiative. My possible contribution: '+($('volnote').value.trim()||'I would like to learn more.');try{await navigator.clipboard.writeText(s);toast('Invitation copied')}catch(e){toast('Copy is not available in this browser')}};
+
+// Social publishing tools: prepare content, never auto-publish.
+const dailyPrompts=[
+"AI can be powerful without being entitled to decide. Who should define the limits of that authority?",
+"Can an AI system recognise uncertainty in a person's words without turning uncertainty into an assumption about that person?",
+"Human dignity is not a benchmark score. How should institutions make it visible in AI governance?",
+"Whose knowledge is missing when AI systems are designed, evaluated and deployed across the world?",
+"Efficiency is not the only public value. What should count when AI affects rights, livelihoods and futures?",
+"Can we build AI that strengthens human freedom instead of narrowing the range of acceptable thought?",
+"Who is accountable when an automated recommendation harms someone, and can that person challenge it?",
+"Different languages carry different ways of expressing need. How should AI be tested beyond dominant languages?",
+"Should some decisions remain human even when an AI system predicts outcomes more accurately?",
+"Public trust requires evidence, transparency and the right to disagree. Are institutions providing all three?"
+];
+function todayLabel(){return new Intl.DateTimeFormat(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(new Date())}
+let dailyIndex=(new Date().getDate()+new Date().getMonth()*3)%dailyPrompts.length;
+function buildDaily(){ $('dailyDate').textContent=todayLabel();$('xDraft').value=dailyPrompts[dailyIndex];}
+buildDaily();
+$('newDaily').onclick=()=>{dailyIndex=(dailyIndex+1)%dailyPrompts.length;buildDaily();toast('New question ready for your review')};
+function fullX(){return $('xDraft').value.trim()+( $('xTags').value.trim()?'\\n\\n'+$('xTags').value.trim():'')}
+async function copyText(t,msg){try{await navigator.clipboard.writeText(t);toast(msg)}catch(e){toast('Clipboard unavailable. Select and copy the text instead.')}}
+$('copyX').onclick=()=>copyText(fullX(),'X draft copied');
+$('shareX').onclick=()=>{const t=fullX();window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t),'_blank','noopener,noreferrer')};
+$('downloadX').onclick=()=>downloadText('the-human-question-x-draft.txt',fullX());
+$('copyInsta').onclick=()=>copyText($('instaCaption').value,'Instagram caption copied');
+$('shareInsta').onclick=()=>copyText($('instaCaption').value,'Caption copied — paste it into Instagram');
+$('useQuote').onclick=()=>{$('posterTitle').value=$('quoteText').value;$('posterSub').value='The Human Question · Intent · Emotion · Knowledge';drawPoster();location.hash='studio';};
+$('downloadQuote').onclick=async()=>{const old=$('posterTitle').value;$('posterTitle').value=$('quoteText').value;const b=await makePosterBlob();$('posterTitle').value=old;drawPoster();if(!b)return;downloadBlob('human-question-quote.png',b)};
+$('copyInvite').onclick=()=>copyText('An open invitation from The Human Question\\n\\nWe invite researchers, universities, public institutions, civil-society organisations, journalists, technology companies and independent thinkers to join a respectful, evidence-led conversation about AI, human understanding, dignity and accountability.\\n\\nThis is not a fight against technology. It is a shared inquiry into how powerful systems should serve people, plural knowledge and future generations. We welcome rigorous criticism, disagreement and collaboration.\\n\\nWhat should AI never decide alone?','Invitation copied');
+function downloadBlob(name,blob){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500)}
+function downloadText(name,text){downloadBlob(name,new Blob([text],{type:'text/plain;charset=utf-8'}))}
+function snapshotData(){return {format:'TheHumanQuestion-session-export',version:1,exportedAt:new Date().toISOString(),note:'User-initiated export. Not stored by this website.',contributions:sessionContributions,moderatorNote:$('hostNote').value,xDraft:$('xDraft').value,xTags:$('xTags').value,instagramCaption:$('instaCaption').value,quote:$('quoteText').value}}
+$('exportData').onclick=()=>downloadBlob('the-human-question-my-data.json',new Blob([JSON.stringify(snapshotData(),null,2)],{type:'application/json'}));
+$('importData').onclick=()=>$('importFile').click();
+$('importFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(d.format!=='TheHumanQuestion-session-export')throw new Error('Unsupported file');sessionContributions=Array.isArray(d.contributions)?d.contributions.filter(x=>x&&typeof x.text==='string'&&typeof x.topic==='string').slice(0,100):[];$('hostNote').value=typeof d.moderatorNote==='string'?d.moderatorNote.slice(0,3000):'';$('xDraft').value=typeof d.xDraft==='string'?d.xDraft.slice(0,280):$('xDraft').value;$('xTags').value=typeof d.xTags==='string'?d.xTags.slice(0,400):$('xTags').value;$('instaCaption').value=typeof d.instagramCaption==='string'?d.instagramCaption.slice(0,2200):$('instaCaption').value;$('quoteText').value=typeof d.quote==='string'?d.quote.slice(0,500):$('quoteText').value;render();$('dataStatus').textContent='Imported into this temporary session only.';toast('Your data is now in this session')}catch(err){toast('This file is not a valid Human Question export')}e.target.value=''};
+$('clearAllData').onclick=()=>{if(!confirm('Clear all temporary contributions, notes and social drafts from this page session?'))return;sessionContributions=[];$('hostNote').value='';$('xDraft').value='';$('instaCaption').value='';$('quoteText').value='';render();$('dataStatus').textContent='Temporary session cleared.';toast('Session data cleared')};
+
+
+// Reader-paced motion: native touch scrolling remains untouched; reveals follow natural arrival.
+(function(){
+ const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ document.body.classList.add('motion-ready');
+ const revealTargets=document.querySelectorAll('section .head,section .split,section .tests,section .labGrid,section .methodGrid,section .joinGrid,section .shareGrid,section .dataGrid,.quoteBand .quote,.manifesto .wrap');
+ revealTargets.forEach(el=>el.classList.add('reveal'));
+ if('IntersectionObserver' in window && !reduce){
+   const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+     if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}
+   }),{root:null,rootMargin:'0px 0px -9% 0px',threshold:.08});
+   revealTargets.forEach(el=>io.observe(el));
+ }else revealTargets.forEach(el=>el.classList.add('in-view'));
+ const bar=document.getElementById('readingProgress');
+ let ticking=false;
+ function updateProgress(){
+   const max=document.documentElement.scrollHeight-window.innerHeight;
+   const pct=max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0;
+   if(bar)bar.style.width=pct+'%';
+   ticking=false;
+ }
+ window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateProgress);ticking=true}},{passive:true});
+ window.addEventListener('resize',updateProgress,{passive:true});updateProgress();
+
+ // Current-section cue gives a quiet sense of place without taking over navigation.
+ const navLinks=[...document.querySelectorAll('.links a[href^="#"]')];
+ const sections=[...document.querySelectorAll('main section[id]')];
+ if('IntersectionObserver' in window){
+   const navIO=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>{
+       if(entry.isIntersecting){
+         navLinks.forEach(a=>{if(a.getAttribute('href')==='#'+entry.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+       }
+     });
+   },{rootMargin:'-25% 0px -65% 0px',threshold:0});
+   sections.forEach(sec=>navIO.observe(sec));
+ }
+ // Gentle tactile feedback on activation; no forced vibration and no scroll hijacking.
+ document.querySelectorAll('button:not(:disabled),.btn,.small').forEach(el=>{
+   el.addEventListener('click',()=>{
+     el.classList.remove('tap-wiggle');void el.offsetWidth;el.classList.add('tap-wiggle');
+     window.setTimeout(()=>el.classList.remove('tap-wiggle'),420);
+   },{passive:true});
+ });
+ // Hint appears only briefly on touch devices; it does not intercept gestures.
+ const hint=document.getElementById('touchHint');
+ if(hint && matchMedia('(pointer:coarse)').matches && !reduce){
+   let shown=false;
+   const show=()=>{if(shown)return;shown=true;hint.classList.add('show');setTimeout(()=>hint.classList.remove('show'),2200)};
+   window.addEventListener('touchstart',show,{once:true,passive:true});
+ }
+})();
+
+</script></body></html>
